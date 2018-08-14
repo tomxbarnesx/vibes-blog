@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/activerecord'
+require 'sinatra/flash'
 
 require './models/user.rb'
 require './models/post.rb'
@@ -13,6 +14,22 @@ set :database, {adapter:'postgresql', database:'blog'}
 
 get '/' do
     erb :index
+end
+
+get '/sign-in' do
+    erb :sign_in
+end
+
+post '/sign-in' do
+    @user = User.find_by(email: params[:email])
+    if @user && @user.password == params[:password]
+        session[:user_id] = @user.id
+        flash[:info] = "You have been signed in."
+        redirect '/'
+    else
+        flash[:warning] = 'Your username or password is incorrect.'
+        redirect '/sign-in'
+    end
 end
 
 get '/users' do
