@@ -1,0 +1,14 @@
+input {
+  height: 28px;
+  width: 140px;
+  border-radius: 5px;
+  color: grey;
+  font-family: 'Open Sans', sans-serif;
+  margin: 5px; }
+
+.go-button {
+  width: 40px;
+  background: forestgreen;
+  color: gold; }
+
+/*# sourceMappingURL=forms.css.map */

@@ -32,13 +32,38 @@ post '/sign-in' do
     end
 end
 
+get "/sign-up" do
+    erb :sign_up
+end
+  
+post "/sign-up" do
+    if User.find_by(email: params[:email])
+        flash[:warning] = "There is already an account attached to this email."
+        redirect '/sign-up'
+    elsif User.find_by(blog_name: params[:blog_name])
+        flash[:warning] = "This blog name is already taken"
+        redirect '/sign-up'
+        #POTENTIALLY SUGGEST NEW ONES
+    else
+        @user = User.create(
+            first_name: params[:first_name],
+            last_name: params[:last_name],
+            password: params[:password],
+            email: params[:email],
+            birthday: params[:birthday],
+            blog_name: params[:blog_name],
+            photo_url: params[:photo_url],    
+        )
+    session[:user_id] = @user.id
+    flash[:info] = "You're all signed up. Login in to post your first vibe."
+    redirect "/sign-in"
+    end
+end
+    
+
 get '/users' do
     @all_users = User.all
     erb :users
-end
-
-get '/users/new' do
-    erb :new_user
 end
 
 get '/users/:id' do

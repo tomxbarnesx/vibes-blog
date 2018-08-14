@@ -1,7 +1,7 @@
 <% @all_users.each do |user| %>
 <div>
     <img src="<%=user.photo_url%>" height="300" width="300">
-    <a href="users/<%=user.id%>"><h2><%=user.blog_name%></h2></a>
+    <a href="users/<%=user.id%>"><h1><%=user.blog_name%></h1></a>
     <p>Curator: <%=user.first_name%> <%=user.last_name%></p>
 </div>
 <% end %>

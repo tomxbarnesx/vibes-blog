@@ -6,7 +6,8 @@
   width: 70%;
   margin: 0 auto;
   background-color: white;
-  padding: 2%; }
+  padding: 2%;
+  color: black; }
 
 .sliders1, .sliders2, .sliders3 {
   display: none; }
