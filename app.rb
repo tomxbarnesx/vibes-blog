@@ -13,7 +13,11 @@ enable :sessions
 set :database, {adapter:'postgresql', database:'blog'}
 
 get '/' do
-    erb :index
+    if session[:user_id]
+        erb :signed_in_index
+    else 
+        erb :index
+    end
 end
 
 get '/sign-in' do
@@ -55,7 +59,7 @@ post "/sign-up" do
             photo_url: params[:photo_url],    
         )
     session[:user_id] = @user.id
-    flash[:info] = "You're all signed up. Login in to post your first vibe."
+    flash[:info] = "You're all signed up. Login in to create your first vibe."
     redirect "/sign-in"
     end
 end
@@ -74,5 +78,8 @@ get '/users/:id' do
     erb :show_user
 end
 
-
-
+get "/sign-out" do
+    session[:user_id] = nil
+    flash[:info] = "You have been signed out."
+    redirect "/"
+end
