@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    </head>
+    <body>
+        <div id="the-view">
+            <nav>
+                <ul>
+                    <li class="logo"><a href="/">Vibes</a></li>
+                    <li><a href="#news">Feed</a></li>
+                    <li><a href="users">Users</a></li>
+                    <li class="dropdown">
+                        <a class="dropbtn">Create</a>
+                        <div class="dropdown-content">
+                            <a href="#">New Post</a>
+                            <a href="#">New Vibe</a>
+                        </div>
+                    </li>
+                    <li class="login"><a href="#">Log In</a></li>
+                </ul>
+            </nav>
+            <%= yield %>
+        </div>
+    </body>
+</html>
