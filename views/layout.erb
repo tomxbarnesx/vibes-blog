@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="<%= url('main.css') %>">
+        <link rel="stylesheet" href="<%= url('carousel.css') %>">
         <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     </head>
@@ -17,7 +18,7 @@
                 <ul>
                     <li class="logo"><a href="/">Vibes</a></li>
                     <li><a href='/'>Feed</a></li>
-                    <li><a href="users">Users</a></li>
+                    <li><a href="/users">Users</a></li>
                     <li class="dropdown">
                         <a class="dropbtn">Create</a>
                         <div class="dropdown-content">
@@ -30,6 +31,7 @@
             </nav>
             <%= yield %>
         </div>
+        <script src="<%= url('carousel.js') %>" type="text/javascript"></script>
         <script src="<%= url('main.js') %>" type="text/javascript"></script>
     </body>
 </html>

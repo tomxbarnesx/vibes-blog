@@ -8,11 +8,14 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: 'Open Sans', sans-serif;
+    background-color: #333;
+    min-height: 800px;
 }
 
 .logo {
     font-family: 'Monoton', cursive;
 }
+
 
 //NAV BAR
 
@@ -80,7 +83,7 @@ li.dropdown {
 }
 
 
-//FLASH CSS
+//FLASH
 .flash {
     border-radius: 2px;
     padding: 20px;
