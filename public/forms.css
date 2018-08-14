@@ -4,11 +4,70 @@ input {
   border-radius: 5px;
   color: grey;
   font-family: 'Open Sans', sans-serif;
-  margin: 5px; }
+  margin: 5px;
+  font-weight: bold; }
 
 .go-button {
   width: 40px;
   background: forestgreen;
   color: gold; }
+
+.go-button-post {
+  width: 40px;
+  background: forestgreen;
+  color: gold;
+  margin-top: 0; }
+
+.post-body {
+  width: 301px;
+  height: 150px;
+  text-align: start;
+  border-radius: 5px;
+  margin: 5px;
+  color: grey;
+  border-color: grey;
+  font-family: 'Open Sans', sans-serif; }
+
+#multiboys {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.multiselect {
+  width: 120px; }
+
+.selectBox {
+  position: relative; }
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+  height: 28px;
+  color: grey; }
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; }
+
+.checkboxes {
+  display: none;
+  border: 1px #dadada solid; }
+
+.check-option {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center; }
+  .check-option input {
+    width: 20px;
+    margin-left: 3px; }
+  .check-option p {
+    margin: 8px 0; }
+
+.check-option:hover {
+  background-color: #1e90ff; }
 
 /*# sourceMappingURL=forms.css.map */

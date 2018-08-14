@@ -1,0 +1,40 @@
+<h1>Create Post</h1>
+
+<form action="/sign-up" method="post">
+    <input type="text" name="title" id="title" placeholder="Title">
+    <input type="text" name="song_uri" id="song_uri" placeholder="Spotify Embed Code">
+    <br>
+    <textarea name="post_body" class="post-body" id="post_body" placeholder="Post Body"></textarea>
+    <br>
+    <div id="multiboys">
+        <div class="multiselect">
+            <div class="selectBox" onclick="showCheckboxes()">
+                <select>
+                    <option>Select Vibes</option>
+                </select>
+                <div class="overSelect">
+                </div>
+            </div>
+            <div id="checkboxes-vibes" class="checkboxes">
+                <% @current_all_vibes.each do |vibe| %>
+                    <div class="check-option"><input type="checkbox"><p><%= vibe.name %></p></div>
+                <% end %>
+            </div>
+        </div>
+        <div class="multiselect">
+            <div class="selectBox" onclick="showCheckboxes2()">
+                <select>
+                    <option>Select Tags</option>
+                </select>
+                <div class="overSelect">
+                </div>
+            </div>
+            <div id="checkboxes-tags" class="checkboxes">
+                <% @all_tags.each do |tag| %>
+                    <div class="check-option"><input type="checkbox"><p><%= tag.name %></p></div>
+                <% end %>
+            </div>
+        </div>
+        <input type="submit" class= "go-button-post" value="Go">
+    </div>
+</form>

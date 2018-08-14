@@ -73,13 +73,39 @@ end
 get '/users/:id' do
     @current_user = User.find(params[:id])
     @current_all_vibes = @current_user.vibes
-    @current_vibe = Vibe.find(1)
-    @vibe_posts = @current_vibe.posts
     erb :show_user
 end
 
 get "/sign-out" do
     session[:user_id] = nil
     flash[:info] = "You have been signed out."
+    redirect "/"
+end
+
+get "/create-post" do
+    @current_user = User.find(session[:user_id])
+    @current_all_vibes = @current_user.vibes
+    @all_tags = Tag.all
+    erb :create_post
+end
+
+post "/create-post" do
+    @post = Post.create(
+        title: params[:title],
+        song_uri: params[:song_uri],
+        post_body: params[:post_body],
+    )
+
+    @vibe_connection = VibeConnection.create(
+        post_id: :id,
+        vibe_id: params[:vibe_id]
+    )
+
+    @tag_connection = TagConnection.create(
+        post_id: :id,
+        tag_id: params[:tag_id]
+    )
+
+    flash[:info] = "Success. Post added."
     redirect "/"
 end
