@@ -1,7 +1,10 @@
 <div>
-    <% @all_vibes.each do |vibe| %>
-    <div>
-        <%=vibe.name%>
-    </div>
+    <% @current_all_vibes.each do |vibe| %>
+        <div>
+            <h1><%=vibe.name%></h1>
+            <% vibe.posts.each do |post| %>
+                <h4> <%= post.title %> </h4>
+            <% end %>
+        </div>
     <% end %>
 </div>

@@ -1,5 +1,5 @@
 User.create(first_name: 'Tom', last_name: 'Barnes', password: '1234', email: 'hotchiligumption@gmail.com', birthday: '19900313', blog_name: 'Concrete Carnival', photo_url: '/images/tomb-profile.jpg');
-User.create(first_name: 'Miles', last_name: 'Davis', password: '1234', email: 'mdtrumpet@hotmail.com', birthday: '19260526', blog_name: 'The Birth of the Cool', photo_url: '/images/miles.jpeg');
+User.create(first_name: 'Miles', last_name: 'Davis', password: '1234', email: 'mdtrumpet@hotmail.com', birthday: '19260526', blog_name: 'The Birth of the Cool', photo_url: '/images/milesdavis.jpg');
 
 Vibe.create(name: 'Latest', user_id: 1);
 Vibe.create(name: 'Fuego', user_id: 1);

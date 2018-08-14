@@ -43,7 +43,9 @@ end
 
 get '/users/:id' do
     @current_user = User.find(params[:id])
-    @all_vibes = @current_user.vibes
+    @current_all_vibes = @current_user.vibes
+    @current_vibe = Vibe.find(1)
+    @vibe_posts = @current_vibe.posts
     erb :show_user
 end
 
