@@ -16,13 +16,14 @@ input {
     width: 40px;
     background: forestgreen;
     color: gold;
+    height: 34.5px;
 }
 
 .go-button-post {
     width: 40px;
+    height: 34.5px;
     background: forestgreen;
     color: gold;
-    margin-top: 0;
 }
 
 .post-body {
@@ -54,7 +55,9 @@ input {
 }
 
 .multiselect {
-    width: 120px;
+    width: 180px;
+    margin: 5px;
+    height: 34.5px;
 }
   
 .selectBox {
@@ -64,7 +67,7 @@ input {
 .selectBox select {
     width: 100%;
     font-weight: bold;
-    height: $input-height;
+    height: 34.5px;
     color: grey;
 }
   
@@ -99,8 +102,4 @@ input {
 
 .check-option:hover {
     background-color: #1e90ff;
-}
-
-.vibesmulti {
-    
 }

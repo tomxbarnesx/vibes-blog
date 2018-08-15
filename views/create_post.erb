@@ -17,7 +17,7 @@
             </div>
             <div id="checkboxes-vibes" class="checkboxes">
                 <% @current_all_vibes.each do |vibe| %>
-                    <div class="check-option"><input type="checkbox"><p><%= vibe.name %></p></div>
+                    <div class="check-option"><input type="checkbox" name="vibetag[]" value="<%= vibe.name %>"><p><%= vibe.name %></p></div>
                 <% end %>
             </div>
         </div>

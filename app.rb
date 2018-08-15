@@ -83,7 +83,6 @@ end
 get "/create-post" do
     @current_user = User.find(session[:user_id])
     @current_all_vibes = @current_user.vibes
-    @all_tags = Tag.all
     erb :create_post
 end
 
@@ -94,17 +93,42 @@ post "/create-post" do
         post_body: params[:post_body],
     )
 
-    @vibe_connection = VibeConnection.create(
-        post_id: :id,
-        vibe_id: params[:vibe_id]
-    )
-
-    @tag_connection = TagConnection.create(
-        post_id: :id,
-        tag_id: params[:tag_id]
-    )
+    @vibes_arr = params[:vibetag]
+    @vibes_arr.each do |vb|
+        @vibe_find = Vibe.find_by(name: vb).id
+        @post_find = Post.find_by(title: params[:title]).id
+        VibeConnection.create(
+            vibe_id: @vibe_find,
+            post_id: @post_find
+        )
+    end
 
     flash[:info] = "Success. Post added."
+    redirect "/"
+end
+
+get "/create-vibe" do
+    @all_tags = Tag.all
+    erb :create_vibe
+end
+
+post "/create-vibe" do
+    @vibe = Vibe.create(
+        name: params[:name],
+        user_id: session[:user_id]
+    )
+    
+    @tags_arr = params[:tagged]
+    @tags_arr.each do |tg|
+        @tag_id = Tag.find_by(name: tg).id
+        @vibe_id = Vibe.find_by(name: params[:name]).id
+        TagConnection.create(
+            vibe_id: @vibe_id,
+            tag_id: @tag_id
+        )
+    end    
+
+    flash[:info] = "Success. Vibe created. Now add posts."
     redirect "/"
 end
 

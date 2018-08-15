@@ -10,13 +10,14 @@ input {
 .go-button {
   width: 40px;
   background: forestgreen;
-  color: gold; }
+  color: gold;
+  height: 34.5px; }
 
 .go-button-post {
   width: 40px;
+  height: 34.5px;
   background: forestgreen;
-  color: gold;
-  margin-top: 0; }
+  color: gold; }
 
 .post-body {
   width: 301px;
@@ -34,7 +35,9 @@ input {
   justify-content: space-around; }
 
 .multiselect {
-  width: 120px; }
+  width: 180px;
+  margin: 5px;
+  height: 34.5px; }
 
 .selectBox {
   position: relative; }
@@ -42,7 +45,7 @@ input {
 .selectBox select {
   width: 100%;
   font-weight: bold;
-  height: 28px;
+  height: 34.5px;
   color: grey; }
 
 .overSelect {

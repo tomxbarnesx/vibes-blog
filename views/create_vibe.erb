@@ -1,4 +1,9 @@
-<div class="multiselect">
+<h1>Create Vibe</h1>
+
+<form action="/create-vibe" method="post">
+    <div id="multiboys">
+        <input type="text" name="name" id="name" placeholder="Name">
+        <div class="multiselect">
             <div class="selectBox" onclick="showCheckboxes2()">
                 <select>
                     <option>Select Tags</option>
@@ -8,7 +13,10 @@
             </div>
             <div id="checkboxes-tags" class="checkboxes">
                 <% @all_tags.each do |tag| %>
-                    <div class="check-option"><input type="checkbox"><p><%= tag.name %></p></div>
+                    <div class="check-option"><input name="tagged[]" type="checkbox" value="<%= tag.name %>"><p><%= tag.name %></p></div>
                 <% end %>
             </div>
         </div>
+        <input type="submit" class= "go-button" value="Go">
+    </div>
+</form>
