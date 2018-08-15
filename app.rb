@@ -10,8 +10,6 @@ Dir["./models/*.rb"].each {|file| require file }
 
 enable :sessions
 
-set :database, {adapter:'postgresql', database:'blog'}
-
 get '/' do
     if session[:user_id]
         erb :signed_in_index
