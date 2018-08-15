@@ -109,3 +109,18 @@ post "/create-post" do
     flash[:info] = "Success. Post added."
     redirect "/"
 end
+
+#NEEDS UPDATING —
+
+get '/users/:id/edit' do
+    @current_user = User.find(params[:id])
+    erb :edit_user
+end
+
+delete '/users/:id' do 
+    @current_user = User.find(params[:id])
+    @current_user.destroy
+
+    flash[:info] = "Peace. Your account has been deleted."
+    redirect '/'
+end

@@ -1,0 +1,21 @@
+<h1>Sign Up</h1>
+
+<form method="POST" action="/users/<%= @current_user.id%>">
+    <input type="hidden" name="_method" value="put">
+
+    <input type="text" name="first_name" id="first_name" placeholder="First name" value="<%= @current_user.first_name %>">
+    <input type="text" name="last_name" id="last_name" placeholder="Last name" value="<%= @current_user.last_name %>">
+    <br>
+    <input type="password" name="password" id="password" placeholder="Password" value="<%= @current_user.password %>">
+    <input type="text" name="email" id="email" placeholder="Email" value="<%= @current_user.email %>">
+    <br>
+    <input type="text" name="blog_name" id="blog_name" placeholder="Blog name" value="<%= @current_user.blog_name %>">
+    <br>
+    <input type="text" name="photo_url" id="photo_url" placeholder="Photo URL" value="<%= @current_user.photo_url %>">
+    <input type="submit" class="go-button" value="Go">
+</form>
+
+<form method="POST" action="/user/<%= @current_user.id %>">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete <%= @current_user.blog_name %>">
+</form>

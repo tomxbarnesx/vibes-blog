@@ -1,0 +1,14 @@
+<div class="multiselect">
+            <div class="selectBox" onclick="showCheckboxes2()">
+                <select>
+                    <option>Select Tags</option>
+                </select>
+                <div class="overSelect">
+                </div>
+            </div>
+            <div id="checkboxes-tags" class="checkboxes">
+                <% @all_tags.each do |tag| %>
+                    <div class="check-option"><input type="checkbox"><p><%= tag.name %></p></div>
+                <% end %>
+            </div>
+        </div>
