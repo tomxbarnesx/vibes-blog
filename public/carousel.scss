@@ -9,6 +9,21 @@
       background-color: white;
       padding: 2%;
       color: black;
+
+      h1 {
+        margin: 5px 0px 15px 10px;
+        font-size: 150%;
+      }
+}
+
+.card-body {
+  display: flex;
+  flex-direction: row;
+
+  p {
+    margin: 0px 33px 0px 10px;
+    white-space: pre-wrap;
+  }
 }
 
 .sliders1, .sliders2, .sliders3 {
@@ -17,6 +32,8 @@
   
 .vibe-title {
     color: white;
+    font-size: 200%;
+    margin-bottom: 30px;
 }
 
   /* Next & previous buttons */

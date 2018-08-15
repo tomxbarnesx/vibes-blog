@@ -8,9 +8,11 @@
         <div class="slideshow-container">
             <% vibe.posts.each do |post| %>
                 <div class="slide-cards sliders<%=counter%> fade">
-                    <h3> <%= post.title %> </h3>
-                    <p> <%= post.post_body %> </p>
-                    <%= post.song_uri %>
+                    <h1> <%= post.title %> </h1>
+                    <div class="card-body">
+                        <p><%= post.post_body %></p>
+                        <%= post.song_uri %>
+                    </div>
                 </div>
             <% end %>
             <a class="prev" onclick="plusSlides(-1, <%= counter - 1 %>)">&#10094;</a>

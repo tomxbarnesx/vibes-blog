@@ -8,12 +8,24 @@
   background-color: white;
   padding: 2%;
   color: black; }
+  .slide-cards h1 {
+    margin: 5px 0px 15px 10px;
+    font-size: 150%; }
+
+.card-body {
+  display: flex;
+  flex-direction: row; }
+  .card-body p {
+    margin: 0px 33px 0px 10px;
+    white-space: pre-wrap; }
 
 .sliders1, .sliders2, .sliders3 {
   display: none; }
 
 .vibe-title {
-  color: white; }
+  color: white;
+  font-size: 200%;
+  margin-bottom: 30px; }
 
 /* Next & previous buttons */
 .prev, .next {
