@@ -18,28 +18,29 @@
             <nav>
                 <ul>
                     <li class="logo"><a href="/">Vibes</a></li>
-                    <li><a href='/'>Feed</a></li>
                     <li><a href="/users">Users</a></li>
                     <% if session[:user_id] %>
                         <li class="dropdown">
                             <a class="dropbtn">Create</a>
                             <div class="dropdown-content">
-                                <a href="/create-post">New Post</a>
                                 <a href="/create-vibe">New Vibe</a>
+                                <a href="/create-post">New Post</a>
                             </div>
                         </li>
                     <% else %>
                     <li class="dropdown">
                         <a class="dropbtn">Create</a>
                         <div class="dropdown-content">
-                            <a href="/sign-in">New Post</a>
                             <a href="/sign-in">New Vibe</a>
+                            <a href="/sign-in">New Post</a>
                         </div>
                     </li>
                     <% end %>
                     <% if session[:user_id] %>
+                        <li class="profile"><a href="/users/<%= session[:user_id] %>">Profile</a></li>
                         <li class="login"><a href="/sign-out">Sign Out</a></li>
                     <% else %>
+                        <li class="signup"><a href="/sign-up">Sign Up</a></li>
                         <li class="login"><a href="/sign-in">Log In</a></li>
                     <% end %>
                 </ul>

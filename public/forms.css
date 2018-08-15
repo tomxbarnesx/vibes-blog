@@ -19,6 +19,20 @@ input {
   background: forestgreen;
   color: gold; }
 
+.button-colors {
+  background: forestgreen;
+  color: gold; }
+
+.go-button-edit {
+  background: forestgreen;
+  color: gold;
+  position: relative;
+  left: 7.7em;
+  top: .4em; }
+
+.delete-form {
+  display: inline-block; }
+
 .post-body {
   width: 301px;
   height: 150px;

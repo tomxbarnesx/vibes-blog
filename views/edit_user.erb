@@ -1,5 +1,4 @@
-<h1>Sign Up</h1>
-
+<h1>Edit Profile</h1>
 <form method="POST" action="/users/<%= @current_user.id%>">
     <input type="hidden" name="_method" value="put">
 
@@ -10,12 +9,13 @@
     <input type="text" name="email" id="email" placeholder="Email" value="<%= @current_user.email %>">
     <br>
     <input type="text" name="blog_name" id="blog_name" placeholder="Blog name" value="<%= @current_user.blog_name %>">
-    <br>
     <input type="text" name="photo_url" id="photo_url" placeholder="Photo URL" value="<%= @current_user.photo_url %>">
-    <input type="submit" class="go-button" value="Go">
+    <br>
+    <input type="submit" class="go-button-edit" value="Go">
 </form>
-
-<form method="POST" action="/user/<%= @current_user.id %>">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Delete <%= @current_user.blog_name %>">
-</form>
+<div class="delete-form">
+    <form method="POST" action="/user/<%= @current_user.id %>">
+        <input type="hidden" name="_method" value="delete">
+        <input class="button-colors" type="submit" value="Delete <%= @current_user.blog_name %>">
+    </form>
+</div>
