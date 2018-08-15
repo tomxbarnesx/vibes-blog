@@ -125,17 +125,17 @@ li.dropdown {
     padding: 20px;
     position: relative;
     width: 100%;
-  }
+}
   
   .flash.info {
     background-color: #7cee7c;
     text-align: center;
-  }
+}
   
   .flash.warning {
     background-color: #ee7c7c;
     text-align: center;
-  }
+}
   
   .flash a, .flash a:link, .flash a:active, .flash a:visited {
     position: absolute;
@@ -145,12 +145,16 @@ li.dropdown {
     animation: beckon;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-  }
+}
   
   .flash a:hover {
     color: white;
-  }
+}
   
   .flash.hide {
     display: none;
-  }
+}
+
+  .link-colorless {
+      color: white;
+}

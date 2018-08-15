@@ -132,17 +132,23 @@ post "/create-vibe" do
     redirect "/"
 end
 
-#NEEDS UPDATING —
-
 get '/users/:id/edit' do
     @current_user = User.find(params[:id])
     erb :edit_user
 end
 
+put '/users/:id' do 
+    @current_user = User.find(params[:id])
+    @current_user.update(first_name: params[:first_name], last_name: params[:last_name], password: params[:password], email: params[:email], blog_name: params[:blog_name], photo_url: params[:photo_url])
+
+    flash[:info] = "Success. Your account has been updated."
+    redirect '/'
+end
+
 delete '/users/:id' do 
     @current_user = User.find(params[:id])
     @current_user.destroy
-
+    session[:user_id] = nil
     flash[:info] = "Peace. Your account has been deleted."
     redirect '/'
 end

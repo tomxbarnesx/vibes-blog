@@ -14,7 +14,7 @@
     <input type="submit" class="go-button-edit" value="Go">
 </form>
 <div class="delete-form">
-    <form method="POST" action="/user/<%= @current_user.id %>">
+    <form method="POST" action="/users/<%= @current_user.id %>">
         <input type="hidden" name="_method" value="delete">
         <input class="button-colors" type="submit" value="Delete <%= @current_user.blog_name %>">
     </form>
