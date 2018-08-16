@@ -14,7 +14,7 @@ get '/' do
     if session[:user_id]
         erb :signed_in_index
     else 
-        erb :index
+        erb :index, :layout => :layout_index
     end
 end
 

@@ -1,3 +1,3 @@
 class User < ActiveRecord::Base
-    has_many :vibes, :dependent => :destroy
+    has_many :vibes, dependent: :destroy
 end

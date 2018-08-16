@@ -2,6 +2,13 @@ $input-height: 28px;
 $input-width: 140px;
 $border-radius: 5px;
 
+.form-section {
+    // margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 input {
     height: $input-height;
     width: $input-width;
