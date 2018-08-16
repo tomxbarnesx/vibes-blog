@@ -54,11 +54,13 @@ post "/sign-up" do
             email: params[:email],
             birthday: params[:birthday],
             blog_name: params[:blog_name],
-            photo_url: params[:photo_url],    
+            photo_url: params[:photo_url], 
+            banner_url: params[:banner_url],
+            bio: params[:bio]   
         )
     session[:user_id] = @user.id
     flash[:info] = "You're all signed up. Create your first vibe."
-    redirect "/"
+    redirect "/users"
     end
 end
     
@@ -105,7 +107,7 @@ post "/create-post" do
         end
 
         flash[:info] = "Success. Post added."
-        redirect "/"
+        redirect "/users/#{session[:user_id]}"
     else 
         flash[:warning] = "Your post body must be less than 500 characters."
         redirect "/create-post"
@@ -134,7 +136,7 @@ post "/create-vibe" do
     end    
 
     flash[:info] = "Success. Vibe created. Now add posts."
-    redirect "/"
+    redirect "/create-post"
 end
 
 get '/users/:id/edit' do

@@ -1,5 +1,5 @@
-User.create(first_name: 'Tom', last_name: 'Barnes', password: '1234', email: 'hotchiligumption@gmail.com', birthday: '19900313', blog_name: 'Concrete Carnival', photo_url: '/images/tomb-profile.jpg');
-User.create(first_name: 'Miles', last_name: 'Davis', password: '1234', email: 'mdtrumpet@hotmail.com', birthday: '19260526', blog_name: 'The Birth of the Cool', photo_url: '/images/milesdavis.jpg');
+User.create(first_name: 'Tom', last_name: 'Barnes', password: '1234', email: 'hotchiligumption@gmail.com', birthday: '19900313', blog_name: 'Concrete Carnival', photo_url: '/images/tomb-profile.jpg', bio: 'Drummer, developer, writer, lotus eater. What good is sanity if your art sucks?', banner_url: 'http://www.themesltd.com/headers2/psychedelic_cats.png');
+User.create(first_name: 'Miles', last_name: 'Davis', password: '1234', email: 'mdtrumpet@hotmail.com', birthday: '19260526', blog_name: 'The Birth of the Cool', photo_url: '/images/milesdavis.jpg', bio: 'The Prince of Darkness. I revinvented music five times, what have you done other than troll Republicans on Twitter?', banner_url: 'http://api.ning.com/files/6G2uNkWgRtACDexWbA0475-ybbi1*OBBxfnLiomfCnvB7ExweOZJMZG02oixJH7tBbehdDXj1TqrutTyyE8-vebHBS-yKOJJ/MilesDavis3Banner.jpg');
 
 Vibe.create(name: 'Latest', user_id: 1);
 Vibe.create(name: 'Fuego', user_id: 1);

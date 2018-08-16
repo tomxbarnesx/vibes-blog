@@ -66,7 +66,11 @@
   position: absolute;
   top: 0; }
 
-/* Fading animation */
+.blog-header {
+  font-size: 330%;
+  text-align: center;
+  text-shadow: 3px 3px 2px #ce626b; }
+
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;

@@ -34,7 +34,6 @@
 }
 
 
-
 .sliders1, .sliders2, .sliders3 {
     display: none;
 }
@@ -82,8 +81,51 @@
     position: absolute;
     top: 0;
   }
+
+// BIO & BANNER
+
+.blog-header {
+  font-size: 330%;
+  text-align: center;
+  text-shadow: 3px 3px 2px rgb(206, 98, 107);
+}
+
+// .banner-section {
+//   width: 100%;
+// }
+
+// .bio-float {
+//   margin-top: 3em;
+//   position: absolute;
+//   top: 0;
+//   left: 33em;
+//   text-align: center;
+//   width: 30%;
+
+//   .float-text {
+//     background-color: rgba(219, 219, 219, 0.562);
+//   }
+// }
+
+
+// #index-section {
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   align-items: center;
+//   margin-top: 3em;   
+// }
+
+// .index-image {
+//   width: 100%;
+//   height: auto;
+//   margin-top: -1.5em;
+//   z-index: -1;
+// }
+
+
     
-  /* Fading animation */
+// ANIMATIONS
   .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;

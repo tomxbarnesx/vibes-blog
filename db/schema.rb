@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_13_182041) do
+ActiveRecord::Schema.define(version: 2018_08_16_183852) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(version: 2018_08_13_182041) do
     t.string "photo_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string "banner_url", default: "", null: false
+    t.string "bio", default: "", null: false
   end
 
   create_table "vibe_connections", force: :cascade do |t|

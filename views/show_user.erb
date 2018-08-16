@@ -1,8 +1,11 @@
 <% counter = 1 %>
-<section>
+<section class="banner-section">
     <% if session[:user_id] == @current_user.id %>
         <a class="no-link" href="/users/<%= session[:user_id] %>/edit"><div class="edit-button"><p>Edit Profile</p></div></a>
     <% end %>
+    <h1 class="logo blog-header"><%= @current_user.blog_name %></h1>
+</section>
+<section>
     <% @current_all_vibes.each do |vibe| %>
         <h1 class="vibe-title"><%=vibe.name%></h1>
         <div class="slideshow-container">
