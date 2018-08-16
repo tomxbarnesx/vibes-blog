@@ -1,3 +1,15 @@
+let taglines = document.getElementsByClassName("max-tagline");
+
+setTimeout(() => {
+  taglines[0].classList.add("show");
+}, 500);
+
+setTimeout(() => {
+  taglines[1].classList.add("show");
+}, 1250);
+
+//FLASH PANELS
+
 let closeButton = document.querySelector(".close-button");
 let flashPanel = document.querySelector(".flash");
 
@@ -6,6 +18,10 @@ closeButton.addEventListener("click", event => {
 
   flashPanel.classList.add("hide")
 });
+
+
+//FORMS 
+
 
 var expanded = false;
 

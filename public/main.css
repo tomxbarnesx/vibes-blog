@@ -18,8 +18,33 @@ a > h1 {
 .logo {
   font-family: 'Monoton', cursive; }
 
+#index-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center; }
+
+.index-image {
+  width: 100%;
+  height: auto;
+  margin-top: .8em; }
+
+.tagline-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  width: 87%;
+  top: 7em;
+  flex-wrap: wrap; }
+
+.max-tagline {
+  font-size: 300%;
+  opacity: 0; }
+
 nav {
-  width: 100%; }
+  width: 100%;
+  position: fixed; }
 
 ul {
   height: 50px;
@@ -125,5 +150,14 @@ li.dropdown {
 
 .link-colorless {
   color: white; }
+
+.show {
+  animation: show 2s forwards; }
+
+@keyframes show {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 /*# sourceMappingURL=main.css.map */

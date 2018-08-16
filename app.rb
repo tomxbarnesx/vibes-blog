@@ -57,8 +57,8 @@ post "/sign-up" do
             photo_url: params[:photo_url],    
         )
     session[:user_id] = @user.id
-    flash[:info] = "You're all signed up. Login in to create your first vibe."
-    redirect "/sign-in"
+    flash[:info] = "You're all signed up. Create your first vibe."
+    redirect "/"
     end
 end
     
