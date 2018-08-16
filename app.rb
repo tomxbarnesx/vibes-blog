@@ -87,24 +87,29 @@ get "/create-post" do
 end
 
 post "/create-post" do
-    @post = Post.create(
-        title: params[:title],
-        song_uri: params[:song_uri],
-        post_body: params[:post_body],
-    )
-
-    @vibes_arr = params[:vibetag]
-    @vibes_arr.each do |vb|
-        @vibe_find = Vibe.find_by(name: vb).id
-        @post_find = Post.find_by(title: params[:title]).id
-        VibeConnection.create(
-            vibe_id: @vibe_find,
-            post_id: @post_find
+    if params[:post_body].length < 500
+        @post = Post.create(
+            title: params[:title],
+            song_uri: params[:song_uri],
+            post_body: params[:post_body],
         )
-    end
 
-    flash[:info] = "Success. Post added."
-    redirect "/"
+        @vibes_arr = params[:vibetag]
+        @vibes_arr.each do |vb|
+            @vibe_find = Vibe.find_by(name: vb).id
+            @post_find = Post.find_by(title: params[:title]).id
+            VibeConnection.create(
+                vibe_id: @vibe_find,
+                post_id: @post_find
+            )
+        end
+
+        flash[:info] = "Success. Post added."
+        redirect "/"
+    else 
+        flash[:warning] = "Your post body must be less than 500 characters."
+        redirect "/create-post"
+    end
 end
 
 get "/create-vibe" do

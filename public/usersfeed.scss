@@ -1,0 +1,27 @@
+.user-card {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    color: black;
+    width: 580px;
+    padding: 1em;
+    margin: 2em;
+    box-shadow: 5px 5px 10px rgb(206, 98, 107);
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover {
+        color: rgb(173, 81, 89);
+    }
+}
+
+.card-details {
+padding: 0em 1em 1em 2em ;
+
+    h1 {
+        margin-bottom: 5px;
+    }
+}

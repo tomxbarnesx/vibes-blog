@@ -1,7 +1,9 @@
 <% @all_users.each do |user| %>
-<div>
-    <img src="<%=user.photo_url%>" height="300" width="300">
-    <a href="users/<%=user.id%>"><h1><%=user.blog_name%></h1></a>
-    <p>Curator: <%=user.first_name%> <%=user.last_name%></p>
+<div class="user-card">
+    <a href="users/<%=user.id%>"><img src="<%=user.photo_url%>" height="200" width="200"></a>
+    <div class="card-details">
+        <a href="users/<%=user.id%>"><h1><%=user.blog_name%></h1></a>
+        <p>Curator: <%=user.first_name%> <%=user.last_name%></p>
+    </div>
 </div>
 <% end %>

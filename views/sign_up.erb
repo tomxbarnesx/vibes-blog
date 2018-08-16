@@ -1,16 +1,16 @@
 <section class="form-section">
     <h1>Sign Up</h1>
     <form action="/sign-up" method="post">
-        <input type="text" name="first_name" id="first_name" placeholder="First name">
-        <input type="text" name="last_name" id="last_name" placeholder="Last name">
+        <input type="text" name="first_name" id="first_name" placeholder="First name" required>
+        <input type="text" name="last_name" id="last_name" placeholder="Last name" required>
         <br>
-        <input type="password" name="password" id="password" placeholder="Password">
-        <input type="text" name="email" id="email" placeholder="Email">
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <input type="text" name="email" id="email" placeholder="Email" required>
         <br>
-        <input type="date" name="birthday" id="birthday" placeholder="Birthday">
-        <input type="text" name="blog_name" id="blog_name" placeholder="Blog name">
+        <input type="date" name="birthday" id="birthday" placeholder="Birthday" required>
+        <input type="text" name="blog_name" id="blog_name" placeholder="Blog name" required>
         <br>
-        <input type="text" name="photo_url" id="photo_url" placeholder="Photo URL">
+        <input type="text" name="photo_url" id="photo_url" placeholder="Photo URL" required>
         <input type="submit" class= "go-button" value="Go">
     </form>
 </section>

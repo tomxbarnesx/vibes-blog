@@ -14,9 +14,9 @@ body {
     color: white;
 }
 
-a > h1 {
-    color: white;
-}
+// a > h1 {
+//     color: white;
+// }
 
 .logo {
     font-family: 'Monoton', cursive;
@@ -88,7 +88,8 @@ li a, .dropbtn {
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    color: rgb(221, 109, 118);
+    background-color: rgb(43, 43, 43);
 }
 
 li.dropdown {
@@ -142,7 +143,7 @@ li.dropdown {
 .edit-button {
     position: relative;
     border-radius: 5px;
-    background-color: #b60505;
+    background-color: rgb(156, 74, 81);
     color: white;
     width: 5.5em;
     padding: 5px;
@@ -153,6 +154,10 @@ li.dropdown {
         margin: 0;
         text-align: center;
     }
+}
+
+.edit-button:hover {
+    background-color: rgb(139, 66, 72);
 }
 
 

@@ -1,10 +1,10 @@
 <h1>Create Post</h1>
 
 <form action="/create-post" method="post">
-    <input type="text" name="title" id="title" placeholder="Title">
-    <input type="text" name="song_uri" id="song_uri" placeholder="Spotify Embed Code">
+    <input type="text" name="title" id="title" placeholder="Title" required>
+    <input type="text" name="song_uri" id="song_uri" placeholder="Spotify Embed Code" required>
     <br>
-    <textarea name="post_body" class="post-body" id="post_body" placeholder="Post Body"></textarea>
+    <textarea name="post_body" class="post-body" id="post_body" placeholder="Post Body" required></textarea>
     <br>
     <div id="multiboys">
         <div class="multiselect vibesmulti">

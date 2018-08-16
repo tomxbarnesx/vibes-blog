@@ -1,22 +1,8 @@
-let taglines = document.getElementsByClassName("max-tagline");
-
-if (taglines.length) {
-  setTimeout(() => {
-    taglines[0].classList.add("show");
-  }, 500);
-  
-  setTimeout(() => {
-    taglines[1].classList.add("show");
-  }, 1250);
-}
-
 //FORMS 
 var expanded = false;
 
 function showCheckboxes() {
-  console.log("Hello");
   var checkboxesVibes = document.getElementById("checkboxes-vibes");
-  console.log(checkboxesVibes);
   if (!expanded) {
     checkboxesVibes.style.display = "block";
     expanded = true;
@@ -29,9 +15,7 @@ function showCheckboxes() {
 var expanded2 = false;
 
 function showCheckboxes2() {
-  console.log("Hello")
   var checkboxesTags = document.getElementById("checkboxes-tags");
-  console.log(checkboxesTags);
   if (!expanded2) {
     checkboxesTags.style.display = "block";
     expanded2 = true;
@@ -40,3 +24,19 @@ function showCheckboxes2() {
     expanded2 = false;
   }
 };
+
+document.body.addEventListener("click", event => {
+  var checkboxesVibes = document.getElementById("checkboxes-vibes");
+  if (expanded && checkboxesVibes.style.display == "block"){
+    checkboxesVibes.style.display = "none";
+    expanded = false;
+  }
+});
+
+document.body.addEventListener("click", event => {
+  var checkboxesTags = document.getElementById("checkboxes-tags");
+  if (expanded2 && checkboxesTags.style.display == "block"){
+    checkboxesTags.style.display = "none";
+    expanded = false;
+  }
+});

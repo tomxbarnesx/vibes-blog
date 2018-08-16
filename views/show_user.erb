@@ -8,10 +8,14 @@
         <div class="slideshow-container">
             <% vibe.posts.each do |post| %>
                 <div class="slide-cards sliders<%=counter%> fade">
-                    <h1> <%= post.title %> </h1>
                     <div class="card-body">
-                        <p><%= post.post_body %></p>
-                        <%= post.song_uri %>
+                        <div class="card-left">
+                            <h1> <%= post.title %> </h1>
+                            <p><%= post.post_body %></p>
+                        </div>
+                        <div class="card-right">
+                            <%= post.song_uri %>
+                        </div>
                     </div>
                 </div>
             <% end %>

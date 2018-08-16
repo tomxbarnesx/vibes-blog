@@ -12,9 +12,6 @@ body {
   min-height: 800px;
   color: white; }
 
-a > h1 {
-  color: white; }
-
 .logo {
   font-family: 'Monoton', cursive; }
 
@@ -69,7 +66,8 @@ li a, .dropbtn {
   text-decoration: none; }
 
 li a:hover, .dropdown:hover .dropbtn {
-  background-color: red; }
+  color: #dd6d76;
+  background-color: #2b2b2b; }
 
 li.dropdown {
   display: inline-block; }
@@ -113,7 +111,7 @@ li.dropdown {
 .edit-button {
   position: relative;
   border-radius: 5px;
-  background-color: #b60505;
+  background-color: #9c4a51;
   color: white;
   width: 5.5em;
   padding: 5px;
@@ -122,6 +120,9 @@ li.dropdown {
   .edit-button p {
     margin: 0;
     text-align: center; }
+
+.edit-button:hover {
+  background-color: #8b4248; }
 
 .index-flash {
   margin-top: 3em; }
