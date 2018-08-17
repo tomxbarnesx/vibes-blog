@@ -1,16 +1,11 @@
+<h1 class="logo">The Feed</h1>
+<p>The latest Vibes from our users</p>
 <% counter = 1 %>
-<section class="banner-section">
-    <% if session[:user_id] == @current_user.id %>
-        <a class="no-link" href="/users/<%= session[:user_id] %>/edit"><div class="edit-button"><p>Edit Profile</p></div></a>
-    <% end %>
-    <h1 class="logo blog-header"><%= @current_user.blog_name %></h1>
-    <p class="blog-header-graphs"><strong>Curator:</strong> <%= @current_user.first_name%> <%= @current_user.last_name %></p>
-</section>
-<section>
-    <% @current_all_vibes.each do |vibe| %>
+<section class="feed-section">
+    <% @recent_vibes.each do |vibe| %>
         <h1 class="vibe-title"><%=vibe.name%></h1>
         <div class="slideshow-container">
-            <% vibe.posts.reverse.each do |post| %>
+            <% vibe.posts.each do |post| %>
                 <div class="slide-cards sliders<%=counter%> fade">
                     <div class="card-body">
                         <div class="card-left">
@@ -27,7 +22,7 @@
             <a class="next" onclick="plusSlides(1, <%= counter - 1 %>)">&#10095;</a>
         </div>
         <% counter += 1 %>
-        <% if counter > 5 %>
+        <% if counter > 20 %>
             <% break %>
         <% end %>
     <% end %>

@@ -14,6 +14,7 @@ get '/' do
     if session[:user_id]
         erb :signed_in_index
     else 
+        @demo_vibe = Vibe.find_by(name: "Watching Bob Ross Without Sound")
         erb :index, :layout => :layout_index
     end
 end
@@ -27,7 +28,7 @@ post '/sign-in' do
     if @user && @user.password == params[:password]
         session[:user_id] = @user.id
         flash[:info] = "You have been signed in."
-        redirect '/'
+        redirect "/users/#{session[:user_id]}"
     else
         flash[:warning] = 'Your username or password is incorrect.'
         redirect '/sign-in'
@@ -74,6 +75,11 @@ get '/users/:id' do
     @current_user = User.find(params[:id])
     @current_all_vibes = @current_user.vibes
     erb :show_user
+end
+
+get '/feed' do
+    @recent_vibes = Vibe.order("created_at desc")
+    erb :feed
 end
 
 get "/sign-out" do
@@ -146,10 +152,10 @@ end
 
 put '/users/:id' do 
     @current_user = User.find(params[:id])
-    @current_user.update(first_name: params[:first_name], last_name: params[:last_name], password: params[:password], email: params[:email], blog_name: params[:blog_name], photo_url: params[:photo_url])
+    @current_user.update(first_name: params[:first_name], last_name: params[:last_name], password: params[:password], email: params[:email], blog_name: params[:blog_name], photo_url: params[:photo_url], banner_url: params[:banner_url], bio: params[:bio])
 
     flash[:info] = "Success. Your account has been updated."
-    redirect '/'
+    redirect "/users/#{session[:user_id]}"
 end
 
 delete '/users/:id' do 

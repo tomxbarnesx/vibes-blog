@@ -41,6 +41,20 @@ body {
   font-size: 300%;
   opacity: 0; }
 
+.demo-graphs {
+  width: 60em; }
+
+.demo-bottom-graphs {
+  width: 50em;
+  text-align: justify;
+  margin-bottom: 4em; }
+
+.demo-header {
+  font-size: 300%; }
+
+.demo-header-2 {
+  font-size: 200%; }
+
 .fixed {
   position: fixed; }
 
@@ -167,5 +181,9 @@ li.dropdown {
     opacity: 0; }
   to {
     opacity: 1; } }
+footer {
+  background-color: black;
+  width: 100%;
+  margin: auto; }
 
 /*# sourceMappingURL=main.css.map */

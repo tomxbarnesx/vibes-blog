@@ -55,6 +55,24 @@ body {
     opacity: 0;
 }
 
+.demo-graphs {
+    width: 60em;
+}
+
+.demo-bottom-graphs {
+    width: 50em;
+    text-align: justify;
+    margin-bottom: 4em;
+}
+
+.demo-header {
+    font-size: 300%;
+}
+
+.demo-header-2 {
+    font-size: 200%;
+}
+
 
 //NAV BAR
 
@@ -220,4 +238,12 @@ li.dropdown {
     to {
         opacity: 1;
     }
+}
+
+//FOOTER
+
+footer {
+    background-color: black;
+    width: 100%;
+    margin: auto;
 }

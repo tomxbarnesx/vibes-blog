@@ -14,23 +14,23 @@ input {
 
 .go-button {
   width: 40px;
-  background: forestgreen;
-  color: gold;
+  background-color: #9c4a51;
+  color: white;
   height: 34.5px; }
 
 .go-button-post {
   width: 40px;
   height: 34.5px;
-  background: forestgreen;
-  color: gold; }
+  background-color: #9c4a51;
+  color: white; }
 
 .button-colors {
-  background: forestgreen;
-  color: gold; }
+  background-color: #9c4a51;
+  color: white; }
 
 .go-button-edit {
-  background: forestgreen;
-  color: gold;
+  background-color: #9c4a51;
+  color: white;
   position: relative;
   left: 7.7em;
   top: .4em; }

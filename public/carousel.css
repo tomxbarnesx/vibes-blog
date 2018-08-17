@@ -69,7 +69,11 @@
 .blog-header {
   font-size: 330%;
   text-align: center;
-  text-shadow: 3px 3px 2px #ce626b; }
+  text-shadow: 3px 3px 2px #ce626b;
+  margin-bottom: 0px; }
+
+.blog-header-graphs {
+  text-align: center; }
 
 .fade {
   -webkit-animation-name: fade;

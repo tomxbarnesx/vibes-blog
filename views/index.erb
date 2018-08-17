@@ -5,3 +5,30 @@
     </div>
     <img class="index-image" src="/images/vinylrecrop.jpg" alt="Photo by Jamakassi from Unsplash">
 </section>
+<section id="demo-section">
+    <div class="demo-graphs">
+        <h1 class="logo demo-header">This is a Vibe:</h1>
+    </div>   
+    <h1 class="vibe-title"><%= @demo_vibe.name %></h1>
+        <div class="slideshow-container">
+            <% @demo_vibe.posts.each do |post| %>
+                <div class="slide-cards sliders1 fade">
+                    <div class="card-body">
+                        <div class="card-left">
+                            <h1> <%= post.title %> </h1>
+                            <p><%= post.post_body %></p>
+                        </div>
+                        <div class="card-right">
+                            <%= post.song_uri %>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+        </div>
+    <div class="demo-bottom-graphs">
+        <h1 class="logo demo-header-2">A new way to talk the music you love.</h1>
+        <p>Create playlists and break it down track by track. Highlight the lyrics you love, that drop that make<br>your head spin, or share your story. Because music is more than waveforms and playcounts.</p>
+    </div>
+</section>
