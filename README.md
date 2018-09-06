@@ -1,4 +1,4 @@
-#Vibes
+# Vibes
 A blogging platform for reviewing music, sharing creative insights and creating new playlists.
 
 ## Features
@@ -8,6 +8,8 @@ A blogging platform for reviewing music, sharing creative insights and creating 
 - Users have a page that lists out the 20 most recent posts
 - Users have the ability to see other user’s last 20 posts
 - Users can bounce review collections into Spotify playlists (**coming soon**)
+
+![Alt text](/vibes-screenshot.png "Homepage Screenshot")
 
 ## Prerequistes
 - Ruby 2.5
