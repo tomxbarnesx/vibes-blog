@@ -2,6 +2,8 @@
 A blogging platform for reviewing music, sharing creative insights and creating new playlists.
 
 ## Features
+**Goal:** To create a fullstack simple blog website that enables someone to sign up for an account and create relevant posts on a topic of their choosing.
+
 - Users have a way to create an account (sign up) with at least, login and logout, displaying the proper links during the proper stage of session creation
 - Users have a way to cancel their account
 - Users can create a new post only when logged in
@@ -25,11 +27,7 @@ Password: 1234
 - Spotify API
 
 ## Inspiration
+I took inspiration from Twitter and from the general direction I see most short form internet writing taking. Snappy, snackable bites of insightful content are what publishers and users prioritize on their pages. I want to create a blogging application that could speak to those trends as well, while also nodding to the feel of a flipping through a box of records, or clicking through tracks on a digital playlist.
 
 ## Acknowledgements
-
-
-
-
-
-To create a fullstack simple blog website that enables someone to sign up for an account and create relevant posts on a topic of their choosing.
+Miles Davis, for the decades of inspiration he shared with the world. He appears one of my fake users, sharing his favorite 'Get Up' and 'Get Down' tracks of 2018.
