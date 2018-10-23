@@ -17,8 +17,8 @@ A blogging platform for reviewing music, sharing creative insights and creating 
 - Ruby 2.5
 
 ## Sample Login - 
-Email: mdtrumpet@hotmail.com
-Password: 1234
+- Email: mdtrumpet@hotmail.com
+- Password: 1234
 
 ## Built With
 - Sinatra
