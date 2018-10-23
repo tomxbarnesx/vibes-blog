@@ -27,7 +27,4 @@ Password: 1234
 - Spotify API
 
 ## Inspiration
-I took inspiration from Twitter and from the general direction I see most short form internet writing taking. Snappy, snackable bites of insightful content are what publishers and users prioritize on their pages. I want to create a blogging application that could speak to those trends as well, while also nodding to the feel of a flipping through a box of records, or clicking through tracks on a digital playlist.
-
-## Acknowledgements
-Miles Davis, for the decades of inspiration he shared with the world. He appears one of my fake users, sharing his favorite 'Get Up' and 'Get Down' tracks of 2018.
+I took inspiration from Twitter and general trends in short form internet writing towards snappy, snackable bites of insightful content. The exhaustive Pitchfork review feels more and more dated by the day. I aimed to create a blogging application that could speak to these trends, while nodding to the feel of a flipping through a box of records, or clicking through tracks on a digital playlist.
