@@ -2,7 +2,7 @@
 A blogging platform for reviewing music, sharing creative insights and creating new playlists.
 
 ## Features
-**Goal:** To create a fullstack simple blog website that enables someone to sign up for an account and create relevant posts on a topic of their choosing.
+**Goal:** Create a fullstack blogging application that allows users to sign up and create blog posts collections describing their favorite songs.
 
 - Users have a way to create an account (sign up) with at least, login and logout, displaying the proper links during the proper stage of session creation
 - Users have a way to cancel their account
