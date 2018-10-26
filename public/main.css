@@ -15,6 +15,12 @@ body {
 .logo {
   font-family: 'Monoton', cursive; }
 
+.login-box {
+  background-color: #9c4a51;
+  color: white;
+  border-radius: .5em;
+  padding: 0 2%; }
+
 #index-section {
   display: flex;
   flex-direction: column;
@@ -38,17 +44,20 @@ body {
   flex-wrap: wrap; }
 
 .max-tagline {
-  font-size: 300%;
+  font-size: 4vw;
   opacity: 0; }
 
 .demo-graphs {
-  width: 60em; }
+  width: 54em; }
 
 .demo-bottom-graphs {
-  width: 50em;
+  width: 54em;
   text-align: justify;
-  margin-bottom: 4em; }
+  margin: 0 auto; }
 
+@media screen and (max-width: 600px) {
+  .demo-graphs p {
+    font-size: 90%; } }
 .demo-header {
   font-size: 300%; }
 
@@ -59,7 +68,8 @@ body {
   position: fixed; }
 
 nav {
-  width: 100%; }
+  width: 100%;
+  z-index: 999; }
 
 ul {
   height: 50px;

@@ -4,7 +4,7 @@
   position: relative; }
 
 .slide-cards {
-  max-width: 620px;
+  max-width: 750px;
   margin: 0 auto;
   background-color: white;
   padding: 2%;
@@ -24,6 +24,10 @@
 
 .card-left {
   margin-top: 1em; }
+
+.card-right {
+  display: flex;
+  align-items: center; }
 
 .sliders1, .sliders2, .sliders3 {
   display: none; }
@@ -46,13 +50,13 @@
 
 .prev {
   position: absolute;
-  left: -50px;
+  left: -10px;
   top: 180px; }
 
 .next {
   border-radius: 3px 0 0 3px;
   position: absolute;
-  right: -50px;
+  right: -10px;
   top: 180px; }
 
 .prev:hover, .next:hover {

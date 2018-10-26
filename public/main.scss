@@ -22,6 +22,12 @@ body {
     font-family: 'Monoton', cursive;
 }
 
+.login-box {
+    background-color: rgb(156, 74, 81);
+    color: white;
+    border-radius: .5em;
+    padding: 0 2%;
+}
 
 //INDEX LAYOUT
 
@@ -51,19 +57,27 @@ body {
 }
 
 .max-tagline {
-    font-size: 300%;
+    font-size: 4vw;
     opacity: 0;
 }
 
 .demo-graphs {
-    width: 60em;
+    width: 54em;
 }
 
 .demo-bottom-graphs {
-    width: 50em;
+    width: 54em;
     text-align: justify;
-    margin-bottom: 4em;
+    margin: 0 auto;
 }
+
+@media screen and (max-width: 600px) {
+    .demo-graphs {
+        p {
+            font-size: 90%;
+        }
+    }
+} 
 
 .demo-header {
     font-size: 300%;
@@ -82,6 +96,7 @@ body {
 
 nav {
     width: 100%;
+    z-index: 999;
 }
 
 ul {
