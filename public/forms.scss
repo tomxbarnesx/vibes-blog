@@ -1,5 +1,5 @@
-$input-height: 28px;
-$input-width: 140px;
+$input-height: 37px;
+$input-width: 253px;
 $border-radius: 5px;
 
 .form-section {
@@ -10,6 +10,7 @@ $border-radius: 5px;
 }
 
 input {
+    font-size: 115%;
     height: $input-height;
     width: $input-width;
     border-radius: $border-radius;
